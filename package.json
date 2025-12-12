@@ -1,0 +1,26 @@
+{
+  "name": "adedamola-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://sharedee2776.github.io/adedamola-portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview --port 4173",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "framer-motion": "^10.12.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.4.7",
+    "vite": "^7.2.7"
+  }
+}

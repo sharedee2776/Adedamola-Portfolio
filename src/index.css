@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom small styling */
+:root {
+  --primary: #1F497D;
+  --accent: #4F81BD;
+}
+
+html, body, #root {
+  height: 100%;
+}
