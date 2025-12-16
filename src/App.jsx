@@ -49,7 +49,7 @@ export default function App() {
               <h1 className="text-3xl md:text-4xl font-bold text-[var(--primary)]">Adedamola Dauda</h1>
               <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">Backend & DevOps Engineer</p>
               <div className="mt-3 text-sm text-gray-700 dark:text-gray-300">
-                <a className="mr-4 hover:underline" href="mailto:DamoladaDauda10@gmail.com">DamoladaDauda10@gmail.com</a>
+                <a className="mr-4 hover:underline" href="mailto:Damoladauda10@gmail.com">Damoladauda10@gmail.com</a>
                 <a className="mr-4 hover:underline" href="https://linkedin.com/in/adedamola-dauda" target="_blank" rel="noreferrer">LinkedIn</a>
                 <a className="hover:underline" href="https://github.com/sharedee2776" target="_blank" rel="noreferrer">GitHub</a>
               </div>
@@ -138,7 +138,7 @@ export default function App() {
 
           <section className="mt-12 text-center">
             <h4 className="text-lg font-semibold">Contact</h4>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">Email me at <a className="text-[var(--primary)] hover:underline" href="mailto:DamoladaDauda10@gmail.com">DamoladaDauda10@gmail.com</a></p>
+            <p className="mt-2 text-gray-700 dark:text-gray-300">Email me at <a className="text-[var(--primary)] hover:underline" href="mailto:Damoladauda10@gmail.com">Damoladauda10@gmail.com</a></p>
 
             <div className="mt-6 flex justify-center">
               <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-4 max-w-md w-full px-4">
