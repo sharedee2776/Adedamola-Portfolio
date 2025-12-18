@@ -3,6 +3,13 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
+    title: "Azure Blue-Green CI/CD Pipeline",
+    desc: "Production-ready CI/CD pipeline implementing Blue-Green deployment on Azure App Service with Docker and GitHub Actions, featuring zero-downtime releases and automated health checks.",
+    github: "https://github.com/sharedee2776/azure-blue-green-cicd",
+    demo: "",
+    tags: ["Azure", "Docker", "GitHub Actions", "CI/CD", "Flask"]
+  },
+  {
     title: "DevOps Capstone — Monitoring & CI/CD",
     desc: "FastAPI app containerized with Docker, GitHub Actions CI/CD, pushed to Docker Hub; full observability with Prometheus, Grafana, Loki, Promtail; deployed on AWS EC2.",
     github: "https://github.com/sharedee2776/devops-capstone-project",
@@ -67,12 +74,12 @@ export default function App() {
             <div className="md:flex-1">
               <h2 className="text-2xl font-semibold text-[var(--primary)]">Profile</h2>
               <p className="mt-3 text-gray-700 dark:text-gray-200 leading-relaxed">
-                Motivated Backend & DevOps Engineer with hands-on experience in containerization, CI/CD automation, cloud deployment (AWS EC2), and observability. I build scalable backend systems, deploy them reliably, and instrument services for real-time insights.
+                Motivated Backend & DevOps Engineer with hands-on experience in containerization, CI/CD automation, cloud deployment (AWS, Azure), and observability. I build scalable backend systems, deploy them reliably with zero-downtime strategies, and instrument services for real-time insights.
               </p>
               <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-200">
                 <li><strong>Languages:</strong> Python</li>
                 <li><strong>DevOps:</strong> Docker, GitHub Actions</li>
-                <li><strong>Cloud:</strong> AWS EC2</li>
+                <li><strong>Cloud:</strong> AWS EC2, Azure App Service</li>
                 <li><strong>Monitoring:</strong> Prometheus, Grafana, Loki</li>
               </ul>
             </div>
@@ -138,7 +145,7 @@ export default function App() {
 
           <section className="mt-12 text-center">
             <h4 className="text-lg font-semibold">Contact</h4>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">Email me at <a className="text-[var(--primary)] hover:underline" href="mailto:Damoladauda10@gmail.com">Damoladauda10@gmail.com</a></p>
+            <p className="mt-2 text-gray-700 dark:text-gray-300">Email me at <a className="text-[var(--primary)] hover:underline" href="mailto:Damoladauda10@gmail.com">Damoladauda10@gmail.com</a> or use the form below.</p>
 
             <div className="mt-6 flex justify-center">
               <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-4 max-w-md w-full px-4">
@@ -149,7 +156,7 @@ export default function App() {
                 <button className="bg-[var(--primary)] text-white p-3 rounded-xl hover:bg-[#15385a]" type="submit">Send Message</button>
               </form>
             </div>
-            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">Or connect on <a href="https://linkedin.com/in/adedamola-dauda" className="text-[var(--primary)] hover:underline">LinkedIn</a></p>
+            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">Or connect on <a href="https://linkedin.com/in/adedamola-dauda" className="text-[var(--primary)] hover:underline">LinkedIn</a>.</p>
           </section>
 
         </main>
