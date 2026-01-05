@@ -61,7 +61,7 @@ export default function App() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-[var(--primary)]">Adedamola Dauda</h1>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">Backend & DevOps Engineer</p>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">Full-Stack & DevOps Engineer</p>
               <div className="mt-3 text-sm text-gray-700 dark:text-gray-300">
                 <a className="mr-4 hover:underline" href="mailto:Damoladauda10@gmail.com">Damoladauda10@gmail.com</a>
                 <a className="mr-4 hover:underline" href="https://linkedin.com/in/adedamola-dauda" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -81,18 +81,22 @@ export default function App() {
             <div className="md:flex-1">
               <h2 className="text-2xl font-semibold text-[var(--primary)]">Profile</h2>
               <p className="mt-3 text-gray-700 dark:text-gray-200 leading-relaxed">
-                Motivated Backend & DevOps Engineer with hands-on experience in containerization, CI/CD automation, cloud deployment (AWS, Azure), and observability. I build scalable backend systems, deploy them reliably with zero-downtime strategies, and instrument services for real-time insights.
+                Full-Stack & DevOps Engineer with proven expertise in building and deploying production-grade SaaS applications. Successfully deployed a live multi-tenant webhook monitoring platform with real-time analytics, Stripe billing integration, and serverless architecture on Azure. Experienced in full-stack development (React/TypeScript + Azure Functions), CI/CD automation, containerization, cloud deployment (AWS, Azure), and comprehensive observability solutions. I architect scalable systems, implement robust DevOps practices, and deliver end-to-end solutions from frontend to production deployment.
               </p>
               <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-200">
-                <li><strong>Languages:</strong> Python</li>
-                <li><strong>DevOps:</strong> Docker, GitHub Actions</li>
-                <li><strong>Cloud:</strong> AWS EC2, Azure App Service</li>
+                <li><strong>Languages:</strong> Python, TypeScript, JavaScript</li>
+                <li><strong>Frontend:</strong> React, Vite, Modern UI/UX</li>
+                <li><strong>Backend:</strong> Azure Functions, FastAPI, Flask</li>
+                <li><strong>DevOps:</strong> Docker, GitHub Actions, CI/CD</li>
+                <li><strong>Cloud:</strong> Azure (Functions, Static Web Apps, Blob Storage), AWS EC2</li>
+                <li><strong>SaaS:</strong> Stripe, Firebase Auth, Multi-tenant Architecture</li>
                 <li><strong>Monitoring:</strong> Prometheus, Grafana, Loki</li>
+                <li><strong>Databases:</strong> Azure Storage, SQLite, CosmosDB</li>
               </ul>
             </div>
             <div className="md:w-48 mt-6 md:mt-0 md:ml-8 text-center">
               <img src="/preview.png" alt="Adedamola Dauda" className="w-36 h-36 rounded-full object-cover mx-auto" />
-              <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">Poland · Open to junior DevOps roles</p>
+              <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">Poland · Open to Full-Stack & DevOps roles</p>
             </div>
           </section>
 
@@ -125,24 +129,42 @@ export default function App() {
 
           <section className="mt-12 bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
             <h3 className="text-xl font-semibold text-[var(--primary)]">Skills</h3>
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-700 dark:text-gray-200">
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-4 gap-4 text-sm text-gray-700 dark:text-gray-200">
               <div>
-                <h5 className="font-semibold">Backend</h5>
+                <h5 className="font-semibold">Frontend</h5>
                 <ul className="mt-2">
+                  <li>React + TypeScript</li>
+                  <li>Vite</li>
+                  <li>Modern UI/UX</li>
+                  <li>Responsive Design</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold">Backend & APIs</h5>
+                <ul className="mt-2">
+                  <li>Azure Functions</li>
                   <li>Python / FastAPI</li>
+                  <li>Flask</li>
                   <li>REST APIs</li>
+                  <li>Serverless Architecture</li>
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold">DevOps</h5>
+                <h5 className="font-semibold">Cloud & DevOps</h5>
                 <ul className="mt-2">
+                  <li>Azure (Functions, Static Web Apps)</li>
+                  <li>AWS EC2</li>
                   <li>Docker, Docker Compose</li>
-                  <li>GitHub Actions</li>
+                  <li>GitHub Actions CI/CD</li>
+                  <li>Infrastructure as Code</li>
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold">Observability</h5>
+                <h5 className="font-semibold">SaaS & Monitoring</h5>
                 <ul className="mt-2">
+                  <li>Stripe Integration</li>
+                  <li>Firebase Auth</li>
+                  <li>Multi-tenant Architecture</li>
                   <li>Prometheus, Grafana</li>
                   <li>Loki, Promtail</li>
                 </ul>
@@ -168,7 +190,7 @@ export default function App() {
 
         </main>
 
-        <footer className="mt-20 py-8 text-center text-xs text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} Adedamola Dauda — DevOps & Backend Engineer</footer>
+        <footer className="mt-20 py-8 text-center text-xs text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} Adedamola Dauda — Full-Stack & DevOps Engineer</footer>
       </div>
     </div>
   )
