@@ -118,30 +118,59 @@ export default function App() {
               <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">Poland · Open to Full-Stack & DevOps roles</p>
             </div>
           </section>
+          {/* Featured Projects Section */}
+          <section id="featured-projects" className="mt-10">
+            <h3 className="text-xl font-semibold text-[var(--primary)] mb-4">Featured Projects</h3>
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+              {projects.slice(0, 2).map((p) => (
+                <motion.article
+                  key={p.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white dark:bg-gray-800 border-2 border-[var(--primary)] rounded-xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+                >
+                  <h4 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-[var(--primary)] transition-colors">{p.title}</h4>
+                  <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{p.desc}</p>
+                  <div className="mt-3 flex flex-wrap items-center gap-2">
+                    {p.tags.map((t) => (
+                      <span key={t} className="text-xs px-2 py-1 bg-[var(--accent)]/10 text-[var(--accent)] dark:bg-[var(--accent)]/20 dark:text-[var(--accent)] rounded-full font-medium shadow-sm">{t}</span>
+                    ))}
+                  </div>
+                  <div className="mt-4 flex items-center justify-between">
+                    <a href={p.github} target="_blank" rel="noreferrer" className="text-sm text-[var(--primary)] hover:underline font-semibold">View on GitHub</a>
+                    {p.demo && <a href={p.demo} target="_blank" rel="noreferrer" className="text-sm bg-[var(--accent)] text-white px-4 py-1.5 rounded-lg shadow hover:bg-[var(--primary)] transition">Live demo</a>}
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </section>
+
+          {/* All Projects Section */}
           <section id="projects" className="mt-10">
-            <h3 className="text-xl font-semibold text-[var(--primary)]">Selected Projects</h3>
+            <h3 className="text-xl font-semibold text-[var(--primary)]">All Projects</h3>
             <div className="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2">
-                {projects.map((p) => (
-                  <motion.article
-                    key={p.title}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-white dark:bg-gray-800 border rounded-xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
-                  >
-                    <h4 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-[var(--primary)] transition-colors">{p.title}</h4>
-                    <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{p.desc}</p>
-                    <div className="mt-3 flex flex-wrap items-center gap-2">
-                      {p.tags.map((t) => (
-                        <span key={t} className="text-xs px-2 py-1 bg-[var(--accent)]/10 text-[var(--accent)] dark:bg-[var(--accent)]/20 dark:text-[var(--accent)] rounded-full font-medium shadow-sm">{t}</span>
-                      ))}
-                    </div>
-                    <div className="mt-4 flex items-center justify-between">
-                      <a href={p.github} target="_blank" rel="noreferrer" className="text-sm text-[var(--primary)] hover:underline font-semibold">View on GitHub</a>
-                      {p.demo && <a href={p.demo} target="_blank" rel="noreferrer" className="text-sm bg-[var(--accent)] text-white px-4 py-1.5 rounded-lg shadow hover:bg-[var(--primary)] transition">Live demo</a>}
-                    </div>
-                  </motion.article>
-                ))}
+              {projects.map((p) => (
+                <motion.article
+                  key={p.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white dark:bg-gray-800 border rounded-xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+                >
+                  <h4 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-[var(--primary)] transition-colors">{p.title}</h4>
+                  <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{p.desc}</p>
+                  <div className="mt-3 flex flex-wrap items-center gap-2">
+                    {p.tags.map((t) => (
+                      <span key={t} className="text-xs px-2 py-1 bg-[var(--accent)]/10 text-[var(--accent)] dark:bg-[var(--accent)]/20 dark:text-[var(--accent)] rounded-full font-medium shadow-sm">{t}</span>
+                    ))}
+                  </div>
+                  <div className="mt-4 flex items-center justify-between">
+                    <a href={p.github} target="_blank" rel="noreferrer" className="text-sm text-[var(--primary)] hover:underline font-semibold">View on GitHub</a>
+                    {p.demo && <a href={p.demo} target="_blank" rel="noreferrer" className="text-sm bg-[var(--accent)] text-white px-4 py-1.5 rounded-lg shadow hover:bg-[var(--primary)] transition">Live demo</a>}
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </section>
           <section id="skills" className="mt-12 bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
@@ -192,18 +221,25 @@ export default function App() {
           <section id="certifications" className="mt-12 bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
             <h3 className="text-xl font-semibold text-[var(--primary)] mb-4">Certifications</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {/* Example badges, replace src/href with your actual Credly badge links */}
-              <a href="https://www.credly.com/badges/6e2e7b2e-aws-solutions-architect" target="_blank" rel="noreferrer" className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
-                <img src="https://images.credly.com/size/220x220/images/684f6b2c-76a7-4d47-8c1f-5e6e3c6a6a3a/image.png" alt="AWS Solutions Architect" className="w-20 h-20 mb-2" />
-                <span className="font-medium text-sm text-center">AWS Certified Solutions Architect</span>
+              <a href="https://www.credly.com/badges/286bca95-20fc-4839-8135-167d0d076a4f/public_url" target="_blank" rel="noreferrer" title="Broad understanding of network security, operating systems, and endpoint security. Issued by Cisco." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+                <img src="https://images.credly.com/size/340x340/images/0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/EndpointSecurity.png" alt="Endpoint Security" className="w-20 h-20 mb-2" />
+                <span className="font-medium text-sm text-center">Endpoint Security (Cisco)</span>
               </a>
-              <a href="https://www.credly.com/badges/123456-azure-admin" target="_blank" rel="noreferrer" className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
-                <img src="https://images.credly.com/size/220x220/images/63316b60-f62d-4c1b-9b2b-3b3b2c7b5c8a/image.png" alt="Azure Administrator" className="w-20 h-20 mb-2" />
-                <span className="font-medium text-sm text-center">Microsoft Azure Administrator Associate</span>
+              <a href="https://www.credly.com/badges/20526041-c06b-429a-8471-835d86d5a5e7/public_url" target="_blank" rel="noreferrer" title="Knowledge of network types, how devices send/receive data, and building home wireless networks. Issued by Cisco." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+                <img src="https://images.credly.com/size/340x340/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png" alt="Networking Basics" className="w-20 h-20 mb-2" />
+                <span className="font-medium text-sm text-center">Networking Basics (Cisco)</span>
               </a>
-              <a href="https://www.credly.com/badges/abcdef-kubernetes" target="_blank" rel="noreferrer" className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
-                <img src="https://images.credly.com/size/220x220/images/8e0c9c1a-7c7a-4b7a-8c7a-7c7a8c7a8c7a/image.png" alt="Kubernetes and Cloud Native Associate" className="w-20 h-20 mb-2" />
-                <span className="font-medium text-sm text-center">Kubernetes and Cloud Native Associate</span>
+              <a href="https://www.credly.com/badges/cbb4d5d1-ecf4-4883-bd58-b2da1cab2697/public_url" target="_blank" rel="noreferrer" title="Hands-on skills with Cisco devices, IP addressing, and network setup. Issued by Cisco." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+                <img src="https://images.credly.com/size/340x340/images/88316fe8-5651-4e61-a6be-5be1558f049e/image.png" alt="Networking Devices and Initial Configuration" className="w-20 h-20 mb-2" />
+                <span className="font-medium text-sm text-center">Networking Devices & Initial Config (Cisco)</span>
+              </a>
+              <a href="https://www.credly.com/badges/a6b09e78-770a-4a3b-af6e-a5c08e053a2e/public_url" target="_blank" rel="noreferrer" title="Knowledge of Python programming concepts, syntax, and ability to solve coding tasks. Issued by Cisco & OpenEDG." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+                <img src="https://images.credly.com/size/340x340/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png" alt="Python Essentials 1" className="w-20 h-20 mb-2" />
+                <span className="font-medium text-sm text-center">Python Essentials 1 (Cisco)</span>
+              </a>
+              <a href="https://www.credly.com/badges/18a86065-3326-4c81-bb55-3d5196233641/public_url" target="_blank" rel="noreferrer" title="Fundamentals of AI, machine learning, and chatbot prompting. Issued by Cisco." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+                <img src="https://images.credly.com/size/340x340/images/e2d12302-10f9-40d4-8ff1-066a7008b61d/blob" alt="Introduction to Modern AI" className="w-20 h-20 mb-2" />
+                <span className="font-medium text-sm text-center">Introduction to Modern AI (Cisco)</span>
               </a>
             </div>
             <p className="mt-4 text-sm text-gray-600 dark:text-gray-300 text-center">See all badges on <a href="https://www.credly.com/users/adedamola-dauda/badges" className="text-[var(--primary)] hover:underline" target="_blank" rel="noreferrer">Credly</a>.</p>
