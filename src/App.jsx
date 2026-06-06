@@ -3,44 +3,32 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: "OpsPilot AI",
+    desc: "AI-powered alert intelligence platform reducing alert noise by 80-90% through intelligent deduplication, grouping, and root cause analysis. Powered by NestJS, OpenAI, PostgreSQL, and Redis with real-time event processing and Slack automation.",
+    github: "https://github.com/sharedee2776/opspilotai",
+    demo: "",
+    tags: ["NestJS", "TypeScript", "OpenAI", "PostgreSQL", "Redis", "Slack"]
+  },
+  {
     title: "Webhook Monitor SaaS",
-    desc: "Full-stack SaaS platform for monitoring, analyzing, and managing webhook events with real-time analytics, usage-based billing, and multi-tenant support. Built with React, Azure Functions, Firebase Auth, and Stripe.",
+    desc: "Production-grade full-stack SaaS platform for monitoring, analyzing, and managing webhook events with real-time analytics, usage-based billing, and multi-tenant support. Live deployment with Stripe integration and comprehensive security features.",
     github: "https://github.com/sharedee2776/webhook-monitor",
     demo: "http://webhookmonitor.shop",
     tags: ["React", "TypeScript", "Azure Functions", "Stripe", "Firebase"]
   },
   {
     title: "Azure Blue-Green CI/CD Pipeline",
-    desc: "Production-ready CI/CD pipeline implementing Blue-Green deployment on Azure App Service with Docker and GitHub Actions, featuring zero-downtime releases and automated health checks.",
+    desc: "Production-ready CI/CD pipeline implementing Blue-Green deployment on Azure App Service with Docker and GitHub Actions. Features zero-downtime releases, automated health checks, and slot swapping strategy for enterprise-grade deployments.",
     github: "https://github.com/sharedee2776/azure-blue-green-cicd",
     demo: "",
     tags: ["Azure", "Docker", "GitHub Actions", "CI/CD", "Flask"]
   },
   {
-    title: "DevOps Capstone — Monitoring & CI/CD",
-    desc: "FastAPI app containerized with Docker, GitHub Actions CI/CD, pushed to Docker Hub; full observability with Prometheus, Grafana, Loki, Promtail; deployed on AWS EC2.",
+    title: "DevOps Capstone — Observability Stack",
+    desc: "Enterprise-grade monitoring and logging infrastructure deployed on AWS EC2. Full observability stack with Prometheus, Grafana, Loki, Promtail, and Alertmanager. Complete containerization with Docker Compose and GitHub Actions CI/CD automation.",
     github: "https://github.com/sharedee2776/devops-capstone-project",
     demo: "",
-    tags: ["FastAPI", "Docker", "Prometheus", "Grafana", "AWS"]
-  },
-  {
-    title: "Global Weather & Air Quality Analytics",
-    desc: "ETL pipeline aggregating weather & AQI from multiple APIs, SQLite DB, EDA and dashboard-ready data modeling.",
-    github: "https://github.com/sharedee2776/Global-Weather-Air-Quality-Analytics-Dashboard",
-    tags: ["Python", "APIs", "SQLite", "ETL"]
-  },
-  {
-    title: "Weather Forecast Web App",
-    desc: "Flask-based weather app using OpenWeather API, deployed with Gunicorn on Render.",
-    github: "https://github.com/sharedee2776/Weather_app_project",
-    demo: "https://weather-app-project-mswz.onrender.com",
-    tags: ["Flask", "Deployment"]
-  },
-  {
-    title: "Bike Sales Revenue Analysis",
-    desc: "Data cleaning and dashboards in Excel & Tableau to showcase revenue trends.",
-    github: "https://github.com/sharedee2776/Data-analytics-portfolio/tree/main/bike-sales-revenue",
-    tags: ["Tableau", "Data Analysis"]
+    tags: ["FastAPI", "Docker", "Prometheus", "Grafana", "AWS EC2"]
   }
 ];
 
@@ -82,7 +70,7 @@ export default function App() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-[var(--primary)]">Adedamola Dauda</h1>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">Full-Stack & DevOps Engineer</p>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">Backend Engineer & DevOps Specialist</p>
               <div className="mt-3 text-sm text-gray-700 dark:text-gray-300">
                 <a className="mr-4 hover:underline" href="mailto:Damoladauda10@gmail.com">Damoladauda10@gmail.com</a>
                 <a className="mr-4 hover:underline" href="https://linkedin.com/in/adedamola-dauda" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -100,22 +88,22 @@ export default function App() {
             <div className="md:flex-1">
               <h2 className="text-2xl font-semibold text-[var(--primary)]">Profile</h2>
               <p className="mt-3 text-gray-700 dark:text-gray-200 leading-relaxed">
-                Full-Stack & DevOps Engineer with proven expertise in building and deploying production-grade SaaS applications. Successfully deployed a live multi-tenant webhook monitoring platform with real-time analytics, Stripe billing integration, and serverless architecture on Azure. Experienced in full-stack development (React/TypeScript + Azure Functions), CI/CD automation, containerization, cloud deployment (AWS, Azure), and comprehensive observability solutions. I architect scalable systems, implement robust DevOps practices, and deliver end-to-end solutions from frontend to production deployment.
+                Backend Engineer and DevOps specialist with strong experience building and deploying production-grade systems. Specialized in full-stack SaaS platforms, real-time backend systems, and enterprise-grade infrastructure. Successfully delivered live multi-tenant applications, advanced CI/CD pipelines, and comprehensive monitoring solutions.
               </p>
               <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-200">
                 <li><strong>Languages:</strong> Python, TypeScript, JavaScript</li>
                 <li><strong>Frontend:</strong> React, Vite, Modern UI/UX</li>
-                <li><strong>Backend:</strong> Azure Functions, FastAPI, Flask</li>
-                <li><strong>DevOps:</strong> Docker, GitHub Actions, CI/CD</li>
-                <li><strong>Cloud:</strong> Azure (Functions, Static Web Apps, Blob Storage), AWS EC2</li>
-                <li><strong>SaaS:</strong> Stripe, Firebase Auth, Multi-tenant Architecture</li>
-                <li><strong>Monitoring:</strong> Prometheus, Grafana, Loki</li>
-                <li><strong>Databases:</strong> Azure Storage, SQLite, CosmosDB</li>
+                <li><strong>Backend:</strong> NestJS, Azure Functions, FastAPI, Flask</li>
+                <li><strong>DevOps:</strong> Docker, GitHub Actions, CI/CD, Blue-Green Deployments</li>
+                <li><strong>Cloud:</strong> Azure (Functions, Static Web Apps), AWS EC2</li>
+                <li><strong>Databases:</strong> PostgreSQL, Azure Storage, SQLite</li>
+                <li><strong>Observability:</strong> Prometheus, Grafana, Loki, Alertmanager</li>
+                <li><strong>SaaS Patterns:</strong> Stripe, Firebase Auth, Multi-tenant Architecture</li>
               </ul>
             </div>
             <div className="md:w-48 mt-6 md:mt-0 md:ml-8 text-center">
               <img src="/preview.png" alt="Adedamola Dauda" className="w-36 h-36 rounded-full object-cover mx-auto" />
-              <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">Poland · Open to Full-Stack & DevOps roles</p>
+              <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">Poland · Open to Backend & DevOps roles</p>
             </div>
           </section>
           {/* Featured Projects Section */}
@@ -188,9 +176,9 @@ export default function App() {
               <div>
                 <h5 className="font-semibold">Backend & APIs</h5>
                 <ul className="mt-2">
+                  <li>NestJS</li>
                   <li>Azure Functions</li>
-                  <li>Python / FastAPI</li>
-                  <li>Flask</li>
+                  <li>Python (FastAPI, Flask)</li>
                   <li>REST APIs</li>
                   <li>Serverless Architecture</li>
                 </ul>
@@ -200,19 +188,19 @@ export default function App() {
                 <ul className="mt-2">
                   <li>Azure (Functions, Static Web Apps)</li>
                   <li>AWS EC2</li>
-                  <li>Docker, Docker Compose</li>
+                  <li>Docker & Docker Compose</li>
                   <li>GitHub Actions CI/CD</li>
-                  <li>Infrastructure as Code</li>
+                  <li>Blue-Green Deployments</li>
                 </ul>
               </div>
               <div>
-                <h5 className="font-semibold">SaaS & Monitoring</h5>
+                <h5 className="font-semibold">Observability & SaaS</h5>
                 <ul className="mt-2">
+                  <li>Prometheus & Grafana</li>
+                  <li>Loki & Promtail</li>
                   <li>Stripe Integration</li>
-                  <li>Firebase Auth</li>
                   <li>Multi-tenant Architecture</li>
-                  <li>Prometheus, Grafana</li>
-                  <li>Loki, Promtail</li>
+                  <li>Firebase Auth</li>
                 </ul>
               </div>
             </div>
@@ -221,32 +209,32 @@ export default function App() {
           <section id="certifications" className="mt-12 bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
             <h3 className="text-xl font-semibold text-[var(--primary)] mb-4">Certifications</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <a href="https://www.credly.com/badges/286bca95-20fc-4839-8135-167d0d076a4f/public_url" target="_blank" rel="noreferrer" title="Broad understanding of network security, operating systems, and endpoint security. Issued by Cisco." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+              <a href="https://www.credly.com/badges/286bca95-20fc-4839-8135-167d0d076a4f/public_url" target="_blank" rel="noreferrer" title="Broad understanding of network security, operating systems, and endpoint protection">
                 <img src="https://images.credly.com/size/340x340/images/0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/EndpointSecurity.png" alt="Endpoint Security" className="w-20 h-20 mb-2" />
                 <span className="font-medium text-sm text-center">Endpoint Security (Cisco)</span>
               </a>
-              <a href="https://www.credly.com/badges/20526041-c06b-429a-8471-835d86d5a5e7/public_url" target="_blank" rel="noreferrer" title="Knowledge of network types, how devices send/receive data, and building home wireless networks. Issued by Cisco." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+              <a href="https://www.credly.com/badges/20526041-c06b-429a-8471-835d86d5a5e7/public_url" target="_blank" rel="noreferrer" title="Knowledge of network types, how devices send/receive data">
                 <img src="https://images.credly.com/size/340x340/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png" alt="Networking Basics" className="w-20 h-20 mb-2" />
                 <span className="font-medium text-sm text-center">Networking Basics (Cisco)</span>
               </a>
-              <a href="https://www.credly.com/badges/cbb4d5d1-ecf4-4883-bd58-b2da1cab2697/public_url" target="_blank" rel="noreferrer" title="Hands-on skills with Cisco devices, IP addressing, and network setup. Issued by Cisco." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+              <a href="https://www.credly.com/badges/cbb4d5d1-ecf4-4883-bd58-b2da1cab2697/public_url" target="_blank" rel="noreferrer" title="Hands-on skills with Cisco devices">
                 <img src="https://images.credly.com/size/340x340/images/88316fe8-5651-4e61-a6be-5be1558f049e/image.png" alt="Networking Devices and Initial Configuration" className="w-20 h-20 mb-2" />
-                <span className="font-medium text-sm text-center">Networking Devices & Initial Config (Cisco)</span>
+                <span className="font-medium text-sm text-center">Networking Devices & Config (Cisco)</span>
               </a>
-              <a href="https://www.credly.com/badges/a6b09e78-770a-4a3b-af6e-a5c08e053a2e/public_url" target="_blank" rel="noreferrer" title="Knowledge of Python programming concepts, syntax, and ability to solve coding tasks. Issued by Cisco & OpenEDG." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+              <a href="https://www.credly.com/badges/a6b09e78-770a-4a3b-af6e-a5c08e053a2e/public_url" target="_blank" rel="noreferrer" title="Python programming fundamentals">
                 <img src="https://images.credly.com/size/340x340/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png" alt="Python Essentials 1" className="w-20 h-20 mb-2" />
                 <span className="font-medium text-sm text-center">Python Essentials 1 (Cisco)</span>
               </a>
-              <a href="https://www.credly.com/badges/18a86065-3326-4c81-bb55-3d5196233641/public_url" target="_blank" rel="noreferrer" title="Fundamentals of AI, machine learning, and chatbot prompting. Issued by Cisco." className="flex flex-col items-center bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-lg transition">
+              <a href="https://www.credly.com/badges/18a86065-3326-4c81-bb55-3d5196233641/public_url" target="_blank" rel="noreferrer" title="AI and machine learning fundamentals">
                 <img src="https://images.credly.com/size/340x340/images/e2d12302-10f9-40d4-8ff1-066a7008b61d/blob" alt="Introduction to Modern AI" className="w-20 h-20 mb-2" />
                 <span className="font-medium text-sm text-center">Introduction to Modern AI (Cisco)</span>
               </a>
             </div>
-            <p className="mt-4 text-sm text-gray-600 dark:text-gray-300 text-center">See all badges on <a href="https://www.credly.com/users/adedamola-dauda/badges" className="text-[var(--primary)] hover:underline" target="_blank" rel="noreferrer">Credly</a>.</p>
+            <p className="mt-4 text-sm text-gray-600 dark:text-gray-300 text-center">See all badges on <a href="https://www.credly.com/users/adedamola-dauda/badges" className="text-[var(--primary)] hover:underline" target="_blank" rel="noreferrer">Credly</a></p>
           </section>
           <section id="contact" className="mt-12 text-center">
             <h4 className="text-lg font-semibold">Contact</h4>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">Email me at <a className="text-[var(--primary)] hover:underline" href="mailto:Damoladauda10@gmail.com">Damoladauda10@gmail.com</a> or use the form below.</p>
+            <p className="mt-2 text-gray-700 dark:text-gray-300">Email me at <a className="text-[var(--primary)] hover:underline" href="mailto:Damoladauda10@gmail.com">Damoladauda10@gmail.com</a> or reach out on <a href="https://linkedin.com/in/adedamola-dauda" className="text-[var(--primary)] hover:underline" target="_blank" rel="noreferrer">LinkedIn</a></p>
             <div className="mt-6 flex justify-center">
               <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-4 max-w-md w-full px-4">
                 <input type="hidden" name="access_key" value="79d9a523-e7c0-43a3-b0c1-7d5394c642eb" />
@@ -256,12 +244,11 @@ export default function App() {
                 <button className="bg-[var(--primary)] text-white p-3 rounded-xl hover:bg-[#15385a]" type="submit">Send Message</button>
               </form>
             </div>
-            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">Or connect on <a href="https://linkedin.com/in/adedamola-dauda" className="text-[var(--primary)] hover:underline">LinkedIn</a>.</p>
+            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">Or connect on <a href="https://linkedin.com/in/adedamola-dauda" className="text-[var(--primary)] hover:underline" target="_blank" rel="noreferrer">LinkedIn</a></p>
           </section>
         </main>
-        <footer className="mt-20 py-8 text-center text-xs text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} Adedamola Dauda — Full-Stack & DevOps Engineer</footer>
+        <footer className="mt-20 py-8 text-center text-xs text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} Adedamola Dauda — Backend Engineer & DevOps Specialist</footer>
       </div>
     </div>
   );
 }
-
