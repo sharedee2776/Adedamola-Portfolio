@@ -1,16 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom small styling */
+/* ── Color tokens ── */
 :root {
-  --primary: #1F497D;
-  --accent: #4F81BD;
+  --primary:   #0369a1;
+  --accent:    #4f46e5;
+  --emerald:   #059669;
+  --bg:        #f8fafc;
+  --surface:   #ffffff;
+  --surface-2: #f1f5f9;
+  --border:    #e2e8f0;
+  --text:      #0f172a;
+  --muted:     #64748b;
+  --glow:      rgba(3, 105, 161, 0.12);
 }
 
+.dark {
+  --primary:   #38bdf8;
+  --accent:    #818cf8;
+  --emerald:   #34d399;
+  --bg:        #020617;
+  --surface:   #0f172a;
+  --surface-2: #1e293b;
+  --border:    #1e293b;
+  --text:      #f1f5f9;
+  --muted:     #94a3b8;
+  --glow:      rgba(56, 189, 248, 0.08);
+}
+
+/* ── Base ── */
 html, body, #root {
   height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* ── Hero gradient ── */
+.hero-bg {
+  background:
+    radial-gradient(ellipse 70% 55% at 8% 12%, rgba(56, 189, 248, 0.13) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 92% 85%, rgba(129, 140, 248, 0.10) 0%, transparent 55%);
+}
+
+.dark .hero-bg {
+  background:
+    radial-gradient(ellipse 70% 55% at 8% 12%, rgba(56, 189, 248, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 92% 85%, rgba(129, 140, 248, 0.08) 0%, transparent 55%);
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow ring for avatar ── */
+.avatar-ring {
+  box-shadow:
+    0 0 0 3px var(--surface),
+    0 0 0 5px var(--primary),
+    0 0 32px var(--glow);
+}
+
+/* ── Card with gradient top border ── */
+.card-featured {
+  position: relative;
+  overflow: hidden;
+}
+.card-featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 12px 12px 0 0;
+}
+
+/* ── Timeline ── */
+.timeline-line {
+  position: absolute;
+  left: 19px;
+  top: 28px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), transparent);
+  opacity: 0.25;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; opacity: 0.4; }
+
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Smooth section transitions ── */
+section { transition: background-color 0.2s; }

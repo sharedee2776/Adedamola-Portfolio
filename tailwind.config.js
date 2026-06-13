@@ -6,11 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
-        primary: '#1F497D',
-        accent: '#4F81BD'
-      }
-    }
+        primary: '#0369a1',
+        accent: '#4f46e5',
+      },
+    },
   },
   plugins: []
 }
