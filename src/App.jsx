@@ -20,6 +20,22 @@ const navLinks = [
 
 const experience = [
   {
+    role: 'AI Platform Engineer',
+    company: 'BespokeLabs AI (via Deel)',
+    period: 'March 2026 – Present',
+    type: 'Contract',
+    current: true,
+    bullets: [
+      'Designed and implemented production-grade evaluation environments for autonomous AI agents across DevOps, Site Reliability Engineering (SRE), Platform Engineering, and Cloud Operations domains.',
+      'Built realistic, reproducible infrastructure scenarios using Docker, Kubernetes (k3s), Linux, CI/CD pipelines, and cloud-native tooling to simulate real-world engineering workflows.',
+      'Developed end-to-end automated grading systems in Python to validate functional correctness, infrastructure behaviour, and deployment outcomes across diverse engineering scenarios.',
+      'Created deterministic evaluation pipelines capable of measuring AI agent performance across multiple execution rollouts while minimising infrastructure variance and false negatives.',
+      'Reviewed and validated complex engineering tasks to ensure reproducibility, security, and production realism across contributed evaluation scenarios.',
+      'Collaborated within a globally distributed engineering organisation focused on advancing large language model evaluation and autonomous software engineering systems.',
+    ],
+    stack: ['Kubernetes', 'k3s', 'Docker', 'Python', 'Linux', 'CI/CD', 'Platform Engineering', 'SRE', 'AI Evaluation', 'Infrastructure Automation'],
+  },
+  {
     role: 'AI Infrastructure & Platform Engineering Contractor',
     company: 'Confidential U.S. AI Company (via Mercor)',
     period: '2025 – Present',
