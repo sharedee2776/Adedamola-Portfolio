@@ -68,6 +68,14 @@ const experience = [
 
 const featuredProjects = [
   {
+    title: 'GAUCHO',
+    badge: { label: 'Live Product', color: 'emerald' },
+    desc: 'Crypto-licensed SMTP email broadcasting SaaS enabling users to run bulk campaigns through their own SMTP providers or transactional email APIs. Architected the full platform: FastAPI backend with Celery-based async job processing, multi-provider email delivery (SendGrid, Mailgun, Resend) engineered around cloud SMTP port restrictions, license-gated access control, CSV contact import, campaign analytics with open/click tracking, and an admin console for license management. Deployed on Railway with a Next.js frontend on Vercel, wired to a custom verified sending domain.',
+    github: 'https://github.com/sharedee2776/Gaucho',
+    demo: 'https://gaucho.website',
+    tags: ['FastAPI', 'Celery', 'PostgreSQL', 'Redis', 'Next.js', 'TypeScript', 'Docker', 'Railway'],
+  },
+  {
     title: 'StreamPay',
     badge: { label: 'Live Product', color: 'emerald' },
     desc: 'Multi-tenant creator monetisation & payment platform enabling African creators to receive subscriptions and donations. Architected backend systems for wallets, transactions, withdrawals, analytics, and payment orchestration — with provider abstraction layers, idempotent webhook processing, and automated refund workflows. Delivered as a web app and PWA.',
