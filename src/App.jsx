@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { value: '$10M+', label: 'Transaction Volume' },
+  { value: 'Multi-Provider', label: 'Payment Integrations' },
   { value: '3',     label: 'Live Products'       },
   { value: '5+',    label: 'Years Experience'    },
   { value: '3',     label: 'Company Roles'       },
@@ -72,7 +72,7 @@ const experience = [
     type: 'Full-time',
     current: false,
     bullets: [
-      'Built secure payment services collectively processing over $10M in transaction volume.',
+      'Built secure payment services and infrastructure supporting transaction processing for merchants and consumers.',
       'Contributed to card infrastructure enabling issuance of physical and virtual payment cards through banking API integrations.',
       'Designed and implemented a Buy Now, Pay Later (BNPL) payment gateway for merchant checkout systems.',
       'Integrated multiple third-party payment gateways with secure transaction handling and webhook processing.',
